@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Node } from 'ng-material-treetable';
 import { SampleBomService } from './../sample-bom.service';
 
 @Component({
@@ -13,10 +12,20 @@ export class BomSyncComponent implements OnInit {
 
   constructor(private sampleService: SampleBomService) {
     this.tabs = sampleService.getTabs();
-    //    console.log('WOW!', sampleService.getTabs());
   }
 
   ngOnInit() {
   }
 
+  getItems(name: string): ModelSet[] {
+    return this.sampleService.getComponents(name);
+  }
+
+}
+
+export interface ModelSet {
+  name: string;
+  kind?: number;
+  material?: string;
+  ID?: number;
 }

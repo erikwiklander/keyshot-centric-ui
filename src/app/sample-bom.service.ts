@@ -13,6 +13,11 @@ export class SampleBomService {
     return _.tail(_.map(this.getSample(), 'value.name'));
   }
 
+  getComponents(name: string) {
+    const comp = _.find(this.getSample(), ['value.name', name]);
+    return _.map(_.get(comp, 'children[0].children'), 'value');
+  }
+
   getSample() {
     return [
       {

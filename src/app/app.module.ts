@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TreetableModule } from 'ng-material-treetable';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
 
 
@@ -26,7 +29,10 @@ import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
     TreetableModule,
     MatToolbarModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [SampleBomService],
   bootstrap: [AppComponent]
