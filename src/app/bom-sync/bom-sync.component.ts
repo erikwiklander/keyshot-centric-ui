@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Node } from 'ng-material-treetable';
+import { SampleBomService } from './../sample-bom.service';
 
 @Component({
   selector: 'app-bom-sync',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BomSyncComponent implements OnInit {
 
-  constructor() { }
+  myArray: Node<MyValue>[];
+
+  constructor(private sampleService: SampleBomService) {
+    this.myArray = sampleService.getSample();
+  }
 
   ngOnInit() {
   }
 
+}
+
+export interface MyValue {
+  name: string;
+  kind?: number;
+  material?: string;
+  ID?: number;
+}
+
+export interface KeyshotValue {
+  name: string;
+  kind: number;
+  material: string;
+  ID: string;
+  children: KeyshotValue[];
 }

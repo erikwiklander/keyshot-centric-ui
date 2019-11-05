@@ -1,3 +1,4 @@
+import { SampleBomService } from './sample-bom.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -5,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BomSyncComponent } from './bom-sync/bom-sync.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { TreetableModule } from 'ng-material-treetable';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +18,11 @@ import { BomSyncComponent } from './bom-sync/bom-sync.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TreetableModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [SampleBomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
