@@ -6,25 +6,14 @@
 
 <mat-tab-group animationDuration="0ms">
     <mat-tab *ngFor="let tab of tabs" label="{{tab}}">
-
-        <div>
-            {{getItems(tab) | json}}
-        </div>
-        <!--<div *ngFor="let mats of getItems(tab)">-->
-        <!--
-
-            
-        <div>
-            <mat-form-field>
-                <mat-label>Cars</mat-label>
-                <select matNativeControl [value]="stop">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </mat-form-field>
-        </div>
-        -->
+        <mat-list>
+            <div *ngFor="let row of getItems(tab)">
+                <mat-list-item>
+                    <span style="width: 300px">{{row.name}}</span>
+                    <span>{{row.material}}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
     </mat-tab>
 </mat-tab-group>

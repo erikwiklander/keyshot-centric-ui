@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
 import { BomSyncComponent } from './bom-sync/bom-sync.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TreetableModule } from 'ng-material-treetable';
@@ -13,7 +14,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
     MatIconModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDividerModule,
+    MatListModule,
+    MatGridListModule
   ],
   providers: [SampleBomService],
   bootstrap: [AppComponent]
