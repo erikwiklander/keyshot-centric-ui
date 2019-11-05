@@ -5,9 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', component: BomSyncComponent },
-  { path: 'tree', component: TreeViewerComponent },
-  { path: '**', redirectTo: '' },
+  { path: 'bom/:encodedComponents', component: BomSyncComponent },
+  { path: 'tree', component: TreeViewerComponent }
 ];
 
 @NgModule({

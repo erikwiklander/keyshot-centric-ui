@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SampleBomService } from './../sample-bom.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bom-sync',
@@ -10,8 +11,9 @@ export class BomSyncComponent implements OnInit {
 
   tabs: string[];
 
-  constructor(private sampleService: SampleBomService) {
+  constructor(private sampleService: SampleBomService, private route: ActivatedRoute) {
     this.tabs = sampleService.getTabs();
+    console.log('encoded String', route.snapshot.url[1].path);
   }
 
   ngOnInit() {
