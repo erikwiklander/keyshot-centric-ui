@@ -8,19 +8,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BomSyncComponent } from './bom-sync/bom-sync.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TreetableModule } from 'ng-material-treetable';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+import { TreeViewerComponent } from './tree-viewer/tree-viewer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BomSyncComponent
+    BomSyncComponent,
+    TreeViewerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     TreetableModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [SampleBomService],
   bootstrap: [AppComponent]

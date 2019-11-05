@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,11 @@ import { Injectable } from '@angular/core';
 export class SampleBomService {
 
   constructor() { }
+
+  getTabs() {
+    // skip first item
+    return _.tail(_.map(this.getSample(), 'value.name'));
+  }
 
   getSample() {
     return [

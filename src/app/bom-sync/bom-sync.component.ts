@@ -9,28 +9,14 @@ import { SampleBomService } from './../sample-bom.service';
 })
 export class BomSyncComponent implements OnInit {
 
-  myArray: Node<MyValue>[];
+  tabs: string[];
 
   constructor(private sampleService: SampleBomService) {
-    this.myArray = sampleService.getSample();
+    this.tabs = sampleService.getTabs();
+    //    console.log('WOW!', sampleService.getTabs());
   }
 
   ngOnInit() {
   }
 
-}
-
-export interface MyValue {
-  name: string;
-  kind?: number;
-  material?: string;
-  ID?: number;
-}
-
-export interface KeyshotValue {
-  name: string;
-  kind: number;
-  material: string;
-  ID: string;
-  children: KeyshotValue[];
 }
