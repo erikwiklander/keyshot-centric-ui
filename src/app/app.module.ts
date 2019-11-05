@@ -1,3 +1,4 @@
+import { UrlParserService } from './url-parser.service';
 import { SampleBomService } from './sample-bom.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -40,7 +41,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatListModule,
     MatGridListModule
   ],
-  providers: [SampleBomService],
+  providers: [SampleBomService, UrlParserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

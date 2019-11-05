@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "keyshot-centric-ui": {
+      "hosting": {
+        "keyshot-centric-ui": [
+          "keyshot-centric-ui"
+        ]
+      }
+    }
+  }
+}

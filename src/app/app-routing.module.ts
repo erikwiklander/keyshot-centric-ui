@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: 'bom/:encodedComponents', component: BomSyncComponent },
+  { path: 'bom', component: BomSyncComponent },
   { path: 'tree', component: TreeViewerComponent }
 ];
 

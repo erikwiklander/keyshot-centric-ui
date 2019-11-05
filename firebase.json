@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "keyshot-centric-ui",
+      "public": "dist/keyshot-centric-ui",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
